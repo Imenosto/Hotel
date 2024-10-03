@@ -11,6 +11,7 @@ if( isset($_GET['action']) ){
             if( isset($_POST['prix']) ){
 
                 //upload img
+                //test si fichier existe
                 if(isset($_FILES['image']['name'])){
                     $infoImage = pathinfo($_FILES['image']['name']);
                     $extensions = ["jpeg", "jpg', png"];
@@ -19,6 +20,8 @@ if( isset($_GET['action']) ){
                     var_dump($infoImage['extension']);
                     if( in_array($infoImage['extension'], $extensions) ){
                         
+
+                        //envoie du fichier à sa destination
                     var_dump($infoImage);
                     }
 
